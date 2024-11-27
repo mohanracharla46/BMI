@@ -1,0 +1,21 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>BMI Calculator</h1>
+        <form method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="number" name="weight" placeholder="Weight (kg)" step="0.1" required>
+            <input type="number" name="height" placeholder="Height (m)" step="0.01" required>
+            <button type="submit">Calculate BMI</button>
+        </form>
+        <a href="{{ url_for('history') }}" class="history-link">View History</a>
+    </div>
+</body>
+</html>
